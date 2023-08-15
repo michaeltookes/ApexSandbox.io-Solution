@@ -2,23 +2,17 @@ public Boolean isPassed(Boolean passedExam, Boolean passedAssignments, Boolean p
     //code here
     if(passedExam == true && passedAssignments == true && passedProject == true) {
         return true;
-    }
-    if(passedExam == true && passedAssignments == true && passedProject == false) {
+    } else if (passedExam == true && passedAssignments == true && passedProject == false) {
+        return true
+    } else if (passedExam == true && passedAssignments == false && passedProject == false) {
+        return false;
+    } else if (passedExam == false && passedAssignments == true && passedProject == false) {
+        return false;
+    } else if (passedExam == false && passedAssignments == false && passedProject == true) {
+        return false;
+    } else if (passedExam == false && passedAssignments == true && passedProject == true){
         return true;
-    }
-    if(passedExam == true && passedAssignments == false && passedProject == false) {
-        return false;
-    }
-    if(passedExam == false && passedAssignments == false && passedProject == false) {
-        return false;
-    }
-    if(passedExam == false && passedAssignments == true && passedProject == false) {
-        return false;
-    }
-    if(passedExam == false && passedAssignments == true && passedProject == true) {
-        return true;
-    }
-    if(passedExam == false && passedAssignments == false && passedProject == true) {
+    } else {
         return false;
     }
 }

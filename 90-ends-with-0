@@ -1,4 +1,8 @@
 public Boolean isEndWithZero(Integer num){
      //code here
-    return num % 10 == 0;
+    if (num % 10 == 0) {
+        return true;
+    } else {
+        return false;
+    }
 }
